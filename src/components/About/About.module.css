@@ -1,0 +1,100 @@
+.about {
+  padding: 6rem 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #111;
+  margin-top: 0.5rem;
+}
+
+/* Layout */
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.text {
+  max-width: 720px;
+}
+
+.description {
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+/* Lista */
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.list li {
+  position: relative;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+.list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #111;
+}
+
+/* Stats derecha */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  font-size: 0.9rem;
+}
+
+.stats div {
+  border-left: 2px solid #111;
+  padding-left: 1rem;
+}
+
+.stats strong {
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    margin-top: 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .stats div {
+    border-left: none;
+    padding-left: 0;
+  }
+}

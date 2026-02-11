@@ -1,0 +1,102 @@
+.hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  background-color: #ede8dd;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+  margin-top: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.description {
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryButton {
+  background: transparent;
+  border: 1px solid #111;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  background-color: #111;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manifesto {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: right;
+  line-height: 1.4;
+  color: #222;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .name {
+    font-size: 2.8rem;
+  }
+}
