@@ -4,50 +4,57 @@
   z-index: 1000;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-  background: rgba(246, 239, 231, 0.75);
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  background: rgba(246,239,231, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.navbarTitle {
+.brand {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
+}
+
+.primaryBrand {
+  letter-spacing: 0.5px;
+}
+
+.brandDot {
   color: #000;
 }
 
 .navbarList {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   list-style: none;
 }
 
-.navbarItem {
-  position: relative;
-}
-
 .navbarLink {
   position: relative;
+  font-size: 1rem;
   text-decoration: none;
-  color: #000;
   font-weight: 500;
-  padding-bottom: 4px;
+  color: #111;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.navbarLink:hover {
+  opacity: 1;
 }
 
 .activeLine {
   position: absolute;
   left: 0;
-  bottom: -4px;
-  width: 100%;
+  bottom: -6px;
   height: 2px;
-  background-color: currentColor;
-  transform: scaleX(0);
-  transition: transform 0.2s ease;
-  border-radius: 2px;
+  width: 100%;
+  background-color: #111;
 }

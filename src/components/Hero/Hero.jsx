@@ -3,61 +3,54 @@ import styles from "./Hero.module.css";
 
 function Hero() {
   const handleScrollToProjects = () => {
-    const section = document.getElementById("projects");
+    const section = document.getElementById("proyectos");
     section?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 25 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
     <section className={styles.hero}>
-      <div className={styles.container}>
-        {/* Columna izquierda */}
-        <motion.div
-          className={styles.left}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className={styles.name}>Eguis Suarez</h1>
+      <motion.div
+        className={styles.content}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.p className={styles.badge} variants={itemVariants}>
+          + 5 años de experiencia en el area TI
+        </motion.p>
 
-          <h2 className={styles.subtitle}>
-            Desarrollador Full Stack enfocado en soluciones eficientes y
-            funcionales
-          </h2>
+        <motion.h1 className={styles.title} variants={itemVariants}>
+          Construyo soluciones simples para problemas reales.
+        </motion.h1>
 
-          <p className={styles.description}>
-            Desarrollo soluciones web modernas y eficientes, enfocadas en
-            resolver problemas reales mediante tecnología clara, mantenible y
-            funcional.
-          </p>
+        <motion.p className={styles.subtitle} variants={itemVariants}>
+          Full Stack Developer enfocado en tecnologia mantenible, rendimiento y
+          resultados reales.
+        </motion.p>
 
-          <p className={styles.highlight}>
-            Construyo soluciones simples para problemas reales.
-          </p>
-
-          <div className={styles.actions}>
-            <button
-              className={styles.primaryButton}
-              onClick={handleScrollToProjects}
-            >
-              Ver proyectos
-            </button>
-          </div>
+        <motion.div className={styles.actions} variants={itemVariants}>
+          <button
+            className={styles.primaryButton}
+            onClick={handleScrollToProjects}
+          >
+            Ver proyectos
+          </button>
         </motion.div>
-
-        {/* Columna derecha */}
-        <motion.div
-          className={styles.right}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <p className={styles.manifesto}>
-            Código limpio.
-            <br />
-            Soluciones que funcionan.
-          </p>
-        </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -19,13 +19,16 @@ const navbarVariants = {
 
 const linkVariants = {
   initial: { y: 0 },
-  hover: { y: 0.1 },
+  hover: { y: -2 },
 };
 
 function Navbar() {
   const [active, setActive] = useState("Proyectos");
 
-  const links = ["Proyectos", "Habilidades", "Contacto"];
+  const links = ["Source", "Contacto"];
+  {
+    /* revisar para modificacion de navbar*/
+  }
 
   return (
     <motion.nav
@@ -34,13 +37,10 @@ function Navbar() {
       initial="hidden"
       animate="visible"
     >
-      <motion.h2
-        className={styles.navbarTitle}
-        variants={linkVariants}
-        whileHover={{ scale: 1.05 }}
-      >
-        Eguis
-      </motion.h2>
+      <motion.div className={styles.brand} whileHover={{ scale: 1.05 }}>
+        <span className={styles.primaryBrand}>Eguis</span>
+        <span className={styles.brandDot}>.dev</span>
+      </motion.div>
 
       {/* Links */}
       <ul className={styles.navbarList}>
@@ -67,6 +67,9 @@ function Navbar() {
           </li>
         ))}
       </ul>
+
+      {/* CTA */}
+      <motion.a className=""></motion.a>
     </motion.nav>
   );
 }
