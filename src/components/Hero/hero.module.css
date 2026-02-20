@@ -11,23 +11,19 @@
   max-width: 850px;
 }
 
-.badge {
-  font-size: 0.75rem;
-  margin-bottom: 1.2rem;
-  opacity: 0.6;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
 .title {
-  font-size: 3rem;
+  display: flex;
+  margin-left: 0;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 1.5rem ;
+  padding: 0;
+  
+ 
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   opacity: 0.8;
   margin-bottom: 2.5rem;
   line-height: 1.6;

@@ -29,17 +29,13 @@ function Hero() {
         initial="hidden"
         animate="visible"
       >
-        <motion.p className={styles.badge} variants={itemVariants}>
-          + 5 años de experiencia en el area TI
-        </motion.p>
-
         <motion.h1 className={styles.title} variants={itemVariants}>
-          Construyo soluciones simples para problemas reales.
+          Eguis Suarez Fuenmayor
         </motion.h1>
 
         <motion.p className={styles.subtitle} variants={itemVariants}>
-          Full Stack Developer enfocado en tecnologia mantenible, rendimiento y
-          resultados reales.
+          Especialista TI (Desarrollador / Soporte TI / Administrador de
+          Sistemas)
         </motion.p>
 
         <motion.div className={styles.actions} variants={itemVariants}>

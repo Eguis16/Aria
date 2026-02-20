@@ -13,8 +13,8 @@
 /* Estilo base de la app */
 body {
   font-family: var(--font-body);
-  background-color: #E8E2D8;
-  color: #2d2d2d;
+  background-color: #0F1115;
+  color: #E6EAF0;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

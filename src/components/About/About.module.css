@@ -1,100 +1,145 @@
 .about {
-  padding: 6rem 0;
+  width: 100%;
+  padding: 10px;
 }
 
 .container {
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.title::after {
-  content: "";
+.label {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: #fff;
   display: block;
-  width: 40px;
-  height: 2px;
-  background-color: #111;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Layout */
-.content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-  align-items: start;
+.title {
+  padding: 20px 0;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
-.text {
-  max-width: 720px;
+.summary {
+  max-width: 800px;
+  margin-bottom: 30px;
 }
 
-.description {
-  line-height: 1.8;
-  margin-bottom: 1.25rem;
+.summary p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: #fff;
 }
 
-/* Lista */
-.list {
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.jobCard {
+  border: 1px solid #e5e5e5;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.jobbHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.jobbHeader h4 {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.company {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.period {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.jobCard ul {
   list-style: none;
   padding: 0;
-  margin-top: 2rem;
-  display: grid;
-  gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
-.list li {
+.jobCard ul li {
   position: relative;
-  padding-left: 1.25rem;
+  padding-left: 22px;
+  margin-bottom: 14px;
   line-height: 1.6;
+  color: #fff;
+  font-size: 0.95rem;
 }
-
-.list li::before {
-  content: "—";
+.jobCard ul li::before {
+  content: "";
   position: absolute;
   left: 0;
-  color: #111;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: #111;
+  border-radius: 50%;
 }
 
-/* Stats derecha */
-.stats {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  font-size: 0.9rem;
+.skills {
+  margin-top: 100px;
 }
 
-.stats div {
-  border-left: 2px solid #111;
-  padding-left: 1rem;
+.iconsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 25px;
 }
 
-.stats strong {
-  font-size: 1.4rem;
-  font-weight: 600;
+.iconCard {
+  border: 1px solid #e5e5e5;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.iconCard svg {
   display: block;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .content {
-    grid-template-columns: 1fr;
-  }
+.iconCard span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
 
-  .stats {
-    margin-top: 3rem;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+}
+.iconCard:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  border-color: #333;
+}
 
-  .stats div {
-    border-left: none;
-    padding-left: 0;
-  }
+.future {
+  margin-top: 100px;
+  max-width: 800px;
+}
+
+.future p {
+  line-height: 1.7;
+  color: #333;
 }
